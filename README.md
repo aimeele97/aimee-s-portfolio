@@ -1,6 +1,6 @@
 # Aimee Le's Analytics Portfolio
 
-## [Project 1: Cyclistic Customer Behavior Analysis](https://github.com/aimeele97/cyclistic_customer_behaviour_analysis)
+## [Project 1: Cyclistic Customer Behaviour Analysis](https://github.com/aimeele97/cyclistic_customer_behaviour_analysis)
 
 This analysis aims to explore the differences between casual riders and annual members of Cyclistic in Chicago. Using one year’s worth of historical transaction data from the company’s website, the goal is to provide insights that will assist the marketing team in optimizing strategies to convert casual riders into annual members.
 
