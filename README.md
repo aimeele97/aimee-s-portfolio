@@ -1,10 +1,12 @@
-# Aimee Le's Analytic Portfolio
+# Aimee Le's Analytical Portfolio
 
-## [Project 1: Cyclistic Customer Behaviour Analysis](https://github.com/aimeele97/cyclistic_customer_behaviour_analysis)
+## [Project 1: Cyclistic Customer Behavior Analysis](https://github.com/aimeele97/cyclistic_customer_behaviour_analysis)
 
-* This customer rides data was collected from company history customer transactions from November 2023 to December 2024.
-* There were 12 monthly single datasets
-* Data combination using Pandas and Os libraries in Python
-* Data cleaning, manipulation, analysis using SQL
+- Data sourced from Cyclistic's customer transactions, covering December 2023 to November 2024.
+- The data comprises 12 monthly datasets.
+- Data integration was performed using Python’s Pandas and OS libraries.
+- Data cleaning, manipulation, and analysis were conducted with SQL.
+- Data visualization of the main insights using Tableau Dashboard.
 
-The goal of this project to analyze the difference between casual rides and annual member rides of Cyclist compnay in Chicago using one year historical data from company website. The insight will support martketing team to optimize marketing strategies to convert casual memebr into annnual member.
+**Project Objective:**  
+This analysis aims to explore the differences between casual riders and annual members of Cyclistic in Chicago. Using one year’s worth of historical transaction data from the company’s website, the goal is to provide insights that will assist the marketing team in optimizing strategies to convert casual riders into annual members.
