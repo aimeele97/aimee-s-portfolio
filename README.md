@@ -8,5 +8,4 @@
 - Data cleaning, manipulation, and analysis were conducted with SQL.
 - Data visualization of the main insights using Tableau Dashboard.
 
-**Project Objective:**  
 This analysis aims to explore the differences between casual riders and annual members of Cyclistic in Chicago. Using one year’s worth of historical transaction data from the company’s website, the goal is to provide insights that will assist the marketing team in optimizing strategies to convert casual riders into annual members.
