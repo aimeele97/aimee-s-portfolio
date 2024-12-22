@@ -3,9 +3,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <div>You did it!</div>
-  </header>
+  <VBtn variant="elevated" color="primary">Regular button</VBtn>
 
   <RouterView />
 </template>
