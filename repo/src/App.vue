@@ -3,7 +3,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <VBtn variant="elevated" color="primary">Regular button</VBtn>
-
-  <RouterView />
+  <VLayout>
+    <RouterView />
+  </VLayout>
 </template>
