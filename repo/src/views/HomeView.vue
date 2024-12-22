@@ -38,13 +38,16 @@ const showSideBar = computed(() => smAndUp.value)
             </div>
           </VCol>
           <VCol cols="12" md="9">
-            Welcome to my data analytics portfolio! I am a business professional with over 2 years
-            of experience across diverse industries, including retail, factory, freight forwarding,
-            and hotel. During this time, I discovered my true passion for data analytics. This
-            website is a collection of my data analytics projects, which demonstrate how I leverage
-            domain knowledge, online learning, analytical thinking, problem-solving abilities, and
-            technical skills to solve business challenges, recommend solutions and present these
-            insights through clear visualizations to stakeholders.
+            <div class="text-h5 mb-4">Welcome to my data analytics portfolio!</div>
+            <div class="text-justify">
+              I am a business professional with over 2 years of experience across diverse
+              industries, including retail, factory, freight forwarding, and hotel. During this
+              time, I discovered my true passion for data analytics. This website is a collection of
+              my data analytics projects, which demonstrate how I leverage domain knowledge, online
+              learning, analytical thinking, problem-solving abilities, and technical skills to
+              solve business challenges, recommend solutions and present these insights through
+              clear visualizations to stakeholders.
+            </div>
           </VCol>
         </VRow>
       </VSheet>
