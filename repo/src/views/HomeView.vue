@@ -73,7 +73,7 @@ const showSideBar = computed(() => smAndUp.value)
         </div>
         <VRow>
           <VCol>
-            <VCard color="indigo-darken-2">
+            <VCard color="indigo-darken-1" hover>
               <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
               <VCardTitle class="text-h6"> Project 1 </VCardTitle>
               <VCardText
@@ -83,7 +83,7 @@ const showSideBar = computed(() => smAndUp.value)
             </VCard>
           </VCol>
           <VCol>
-            <VCard color="indigo-darken-2">
+            <VCard color="indigo-darken-1" hover>
               <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
               <VCardTitle class="text-h6"> Project 2 </VCardTitle>
               <VCardText
@@ -93,7 +93,7 @@ const showSideBar = computed(() => smAndUp.value)
             </VCard>
           </VCol>
           <VCol>
-            <VCard color="indigo-darken-2">
+            <VCard color="indigo-darken-1" hover>
               <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
               <VCardTitle class="text-h6"> Project 3 </VCardTitle>
               <VCardText
@@ -103,7 +103,7 @@ const showSideBar = computed(() => smAndUp.value)
             </VCard>
           </VCol>
           <VCol>
-            <VCard color="indigo-darken-2">
+            <VCard color="indigo-darken-1" hover>
               <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
               <VCardTitle class="text-h6"> Project 4 </VCardTitle>
               <VCardText
