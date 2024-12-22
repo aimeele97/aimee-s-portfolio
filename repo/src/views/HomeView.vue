@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useDisplay } from 'vuetify'
+import introPic from '@/assets/intro-avatar.jpg'
 
-const { smAndUp } = useDisplay()
+const { smAndUp, smAndDown } = useDisplay()
 const showSideBar = computed(() => smAndUp.value)
 </script>
 
 <template>
   <VNavigationDrawer v-if="showSideBar" :permanent="showSideBar">
-    <div class="text-h5 px-6 py-4">Aimee Portfolio</div>
+    <div class="text-h5 px-6 py-4">Aimee Le</div>
     <VDivider></VDivider>
     <div class="px-2">
       <VList>
@@ -27,9 +28,28 @@ const showSideBar = computed(() => smAndUp.value)
     </div>
   </VNavigationDrawer>
   <VAppBar v-else title="Application bar"></VAppBar>
-  <VMain class="d-flex align-center justify-center" style="min-height: 300px">
+  <VMain>
     <VContainer>
-      Welcome to my data analytics portfolio! I am a business professional with over 2 years of
+      <VSheet class="pa-4" rounded border>
+        <VRow>
+          <VCol cols="12" md="3" :class="smAndDown ? 'd-flex justify-center' : ''">
+            <div>
+              <VImg :src="introPic" rounded="circle" :width="smAndDown ? '200px' : '100%'"></VImg>
+            </div>
+          </VCol>
+          <VCol cols="12" md="9">
+            Welcome to my data analytics portfolio! I am a business professional with over 2 years
+            of experience across diverse industries, including retail, factory, freight forwarding,
+            and hotel. During this time, I discovered my true passion for data analytics. This
+            website is a collection of my data analytics projects, which demonstrate how I leverage
+            domain knowledge, online learning, analytical thinking, problem-solving abilities, and
+            technical skills to solve business challenges, recommend solutions and present these
+            insights through clear visualizations to stakeholders.
+          </VCol>
+        </VRow>
+      </VSheet>
+
+      <!-- Welcome to my data analytics portfolio! I am a business professional with over 2 years of
       experience across diverse industries, including retail, factory, freight forwarding, and
       hotel. During this time, I discovered my true passion for data analytics. This website is a
       collection of my data analytics projects, which demonstrate how I leverage domain knowledge,
@@ -39,7 +59,7 @@ const showSideBar = computed(() => smAndUp.value)
       Jupyter Notebooks, R Programming, Tableau, Power BI, Big Query, IBM Cognos. Background:
       International trade, business and finance acumen, admin, supply chain and logistic,
       transportation, operations. Education: Bachelor and Master Degree in International Business
-      (finished in 2021).
+      (finished in 2021). -->
     </VContainer>
   </VMain>
 </template>
