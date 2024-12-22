@@ -8,21 +8,23 @@ const showSideBar = computed(() => smAndUp.value)
 
 <template>
   <VNavigationDrawer v-if="showSideBar" :permanent="showSideBar">
-    <VList>
-      <VListItem title="Aimee Portfolio"></VListItem>
-      <VDivider></VDivider>
-      <VListItem title="Introduction" value="introduction"></VListItem>
-      <VListGroup>
-        <template #activator="{ props }">
-          <VListItem v-bind="props" title="Projects" value="projects"></VListItem>
-        </template>
-        <VListItem title="Project 1" value="project1"></VListItem>
-        <VListItem title="Project 2" value="project2"></VListItem>
-        <VListItem title="Project 3" value="project3"></VListItem>
-        <VListItem title="Project 4" value="project4"></VListItem>
-      </VListGroup>
-      <VListItem title="Contact" value="contact"></VListItem>
-    </VList>
+    <div class="text-h5 px-6 py-4">Aimee Portfolio</div>
+    <VDivider></VDivider>
+    <div class="px-2">
+      <VList>
+        <VListItem title="Introduction" value="introduction" rounded></VListItem>
+        <VListGroup>
+          <template #activator="{ props }">
+            <VListItem v-bind="props" title="Projects" value="projects" rounded></VListItem>
+          </template>
+          <VListItem title="Project 1" value="project1" rounded></VListItem>
+          <VListItem title="Project 2" value="project2" rounded></VListItem>
+          <VListItem title="Project 3" value="project3" rounded></VListItem>
+          <VListItem title="Project 4" value="project4" rounded></VListItem>
+        </VListGroup>
+        <VListItem title="Contact" value="contact" rounded></VListItem>
+      </VList>
+    </div>
   </VNavigationDrawer>
   <VAppBar v-else title="Application bar"></VAppBar>
   <VMain class="d-flex align-center justify-center" style="min-height: 300px">
