@@ -3,13 +3,17 @@ import { computed } from 'vue'
 import { useDisplay } from 'vuetify'
 import introPic from '@/assets/intro-avatar.jpg'
 
-const { smAndUp, smAndDown } = useDisplay()
+const { smAndUp } = useDisplay()
 const showSideBar = computed(() => smAndUp.value)
 </script>
 
 <template>
   <VNavigationDrawer v-if="showSideBar" :permanent="showSideBar">
-    <div class="text-h5 px-6 py-4">Aimee Le</div>
+    <div class="d-flex justify-center px-6 py-4">
+      <div>
+        <VImg :src="introPic" rounded="circle" width="200"></VImg>
+      </div>
+    </div>
     <VDivider></VDivider>
     <div class="px-2">
       <VList>
@@ -30,31 +34,19 @@ const showSideBar = computed(() => smAndUp.value)
   <VAppBar v-else title="Application bar"></VAppBar>
   <VMain>
     <VContainer>
-      <VSheet class="pa-4" rounded border>
-        <VRow>
-          <VCol
-            cols="12"
-            md="3"
-            :class="smAndDown ? 'd-flex justify-center' : ''"
-            order="1"
-            order-md="2"
-          >
-            <div>
-              <VImg :src="introPic" rounded="circle" :width="smAndDown ? '150px' : '100%'"></VImg>
-            </div>
-          </VCol>
-          <VCol cols="12" md="9" order="2" order-md="1">
-            <div class="text-h5 mb-4">Welcome to my data analytics portfolio!</div>
-            <div class="text-justify">
-              I am a business professional with over 2 years of experience across diverse
-              industries, including retail, factory, freight forwarding, and hotel. During this
-              time, I discovered my true passion for data analytics. This website is a collection of
-              my data analytics projects, which demonstrate how I leverage domain knowledge, online
-              learning, analytical thinking, problem-solving abilities, and technical skills to
-              solve business challenges, recommend solutions and present these insights through
-              clear visualizations to stakeholders.
-            </div>
-            <!-- <div class="mt-4">
+      <VSheet class="pa-4 mt-2" rounded border>
+        <div class="text-h4 mb-4">Hi. I'm <span class="font-weight-bold">Aimee Le.</span></div>
+        <div class="text-h5 mb-4">Welcome to my data analytics portfolio!</div>
+        <div class="text-justify">
+          I am a business professional with over 2 years of experience across diverse industries,
+          including retail, factory, freight forwarding, and hotel. During this time, I discovered
+          my true passion for data analytics. This website is a collection of my data analytics
+          projects, which demonstrate how I leverage domain knowledge, online learning, analytical
+          thinking, problem-solving abilities, and technical skills to solve business challenges,
+          recommend solutions and present these insights through clear visualizations to
+          stakeholders.
+        </div>
+        <!-- <div class="mt-4">
               <span class="text-indigo-lighten-1 font-weight-bold">Platform and Tools:</span>
               Spreadsheets, SQL, Python, Pandas, Numpy, Jupyter Notebooks, R Programming, Tableau,
               Power BI, Big Query, IBM Cognos.
@@ -69,8 +61,6 @@ const showSideBar = computed(() => smAndUp.value)
               <span class="text-indigo-lighten-1 font-weight-bold">Education:</span> Bachelor and
               Master Degree in International Business (finished in 2021).
             </div> -->
-          </VCol>
-        </VRow>
       </VSheet>
 
       <VSheet class="pa-4 mt-4" rounded border>
