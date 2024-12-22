@@ -32,12 +32,12 @@ const showSideBar = computed(() => smAndUp.value)
     <VContainer>
       <VSheet class="pa-4" rounded border>
         <VRow>
-          <VCol cols="12" md="3" :class="smAndDown ? 'd-flex justify-center' : ''">
+          <VCol cols="12" md="2" :class="smAndDown ? 'd-flex justify-center' : ''">
             <div>
-              <VImg :src="introPic" rounded="circle" :width="smAndDown ? '200px' : '100%'"></VImg>
+              <VImg :src="introPic" rounded="circle" :width="smAndDown ? '100px' : '100%'"></VImg>
             </div>
           </VCol>
-          <VCol cols="12" md="9">
+          <VCol cols="12" md="10">
             <div class="text-h5 mb-4">Welcome to my data analytics portfolio!</div>
             <div class="text-justify">
               I am a business professional with over 2 years of experience across diverse
@@ -48,21 +48,23 @@ const showSideBar = computed(() => smAndUp.value)
               solve business challenges, recommend solutions and present these insights through
               clear visualizations to stakeholders.
             </div>
+            <div class="mt-4">
+              <span class="font-weight-bold">Platform and Tools:</span> Spreadsheets, SQL, Python,
+              Pandas, Numpy, Jupyter Notebooks, R Programming, Tableau, Power BI, Big Query, IBM
+              Cognos.
+            </div>
+            <div class="mt-4">
+              <span class="font-weight-bold">Background:</span> International trade, business and
+              finance acumen, admin, supply chain and logistic, transportation, operations.
+            </div>
+
+            <div class="mt-4">
+              <span class="font-weight-bold">Education:</span> Bachelor and Master Degree in
+              International Business (finished in 2021).
+            </div>
           </VCol>
         </VRow>
       </VSheet>
-
-      <!-- Welcome to my data analytics portfolio! I am a business professional with over 2 years of
-      experience across diverse industries, including retail, factory, freight forwarding, and
-      hotel. During this time, I discovered my true passion for data analytics. This website is a
-      collection of my data analytics projects, which demonstrate how I leverage domain knowledge,
-      online learning, analytical thinking, problem-solving abilities, and technical skills to solve
-      business challenges, recommend solutions and present these insights through clear
-      visualizations to stakeholders. Platform and Tools: Spreadsheets, SQL, Python, Pandas, Numpy,
-      Jupyter Notebooks, R Programming, Tableau, Power BI, Big Query, IBM Cognos. Background:
-      International trade, business and finance acumen, admin, supply chain and logistic,
-      transportation, operations. Education: Bachelor and Master Degree in International Business
-      (finished in 2021). -->
     </VContainer>
   </VMain>
 </template>
