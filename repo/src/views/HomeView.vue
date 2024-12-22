@@ -1,11 +1,5 @@
-<script setup lang="ts">
-import { NButton } from 'naive-ui'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>Test</div>
-  <NButton>Test button</NButton>
-
-  <NButton>Search</NButton>
-  <NButton>Documents</NButton>
+  <main></main>
 </template>
