@@ -8,8 +8,11 @@ const showSideBar = computed(() => smAndUp.value)
 
 <template>
   <VNavigationDrawer v-if="showSideBar" :permanent="showSideBar">
-    <VList>
-      <VListItem title="Test item"></VListItem>
+    <VList nav>
+      <VListItem title="Aimee Portfolio"></VListItem>
+      <VListItem title="Introduction" value="introduction"></VListItem>
+      <VListItem title="Projects" value="projects"></VListItem>
+      <VListItem title="Contact" value="contact"></VListItem>
     </VList>
   </VNavigationDrawer>
   <VAppBar v-else title="Application bar"></VAppBar>
