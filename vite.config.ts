@@ -9,6 +9,7 @@ import VueRouter from 'unplugin-vue-router/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/aimee-s_portfolio/',
   plugins: [
     VueRouter({
       extensions: ['.vue', '.md'],
