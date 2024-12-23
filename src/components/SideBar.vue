@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import introPic from '@/assets/intro-avatar.jpg'
+
+const open = defineModel()
+open.value = ['projects']
 </script>
 <template>
   <div class="d-flex justify-center px-6 py-4">
@@ -9,11 +12,11 @@ import introPic from '@/assets/intro-avatar.jpg'
   </div>
   <VDivider></VDivider>
   <div class="px-2">
-    <VList>
+    <VList v-model:opened="open">
       <VListItem title="Home" value="home" rounded></VListItem>
-      <VListGroup>
+      <VListGroup value="projects">
         <template #activator="{ props }">
-          <VListItem v-bind="props" title="Projects" value="projects" rounded></VListItem>
+          <VListItem v-bind="props" title="Projects" rounded></VListItem>
         </template>
         <VListItem title="Project 1" value="project1" rounded></VListItem>
         <VListItem title="Project 2" value="project2" rounded></VListItem>
