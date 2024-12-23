@@ -17,7 +17,7 @@ const showSideBar = computed(() => smAndUp.value)
     <VDivider></VDivider>
     <div class="px-2">
       <VList>
-        <VListItem title="Introduction" value="introduction" rounded></VListItem>
+        <VListItem title="Home" value="home" rounded></VListItem>
         <VListGroup>
           <template #activator="{ props }">
             <VListItem v-bind="props" title="Projects" value="projects" rounded></VListItem>
