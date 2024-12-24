@@ -28,3 +28,7 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Vite and Vitest temporary files
+vite.config.ts.timestamp*
+vitest.config.ts.timestamp*
