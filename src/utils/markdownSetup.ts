@@ -16,23 +16,5 @@ export const configMarkdown: Options['markdownItSetup'] = (md) => {
       },
     })
     .use(MarkdownItAttrs)
-    .use(MarkdownItAnchor, {
-      tabIndex: false,
-      permalink: MarkdownItAnchor.permalink.headerLink(),
-      slugify: (str: unknown) => {
-        let slug = String(str)
-          .trim()
-          .toLowerCase()
-          .replace(/[\s,.[\]{}()/]+/g, '-')
-          .replace(/[^a-z0-9 -]/g, (c) => c.charCodeAt(0).toString(16))
-          .replace(/-{2,}/g, '-')
-          .replace(/^-*|-*$/g, '')
-
-        if (slug.charAt(0).match(/[^a-z]/g)) {
-          slug = 'section-' + slug
-        }
-
-        return encodeURIComponent(slug)
-      },
-    })
+    .use(MarkdownItAnchor)
 }
