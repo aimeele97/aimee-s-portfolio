@@ -5,9 +5,8 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import vuetify from 'vite-plugin-vuetify'
 import VueRouter from 'unplugin-vue-router/vite'
-import MarkdownItAnchor from 'markdown-it-anchor'
-import MarkdownItPrism from 'markdown-it-prism'
 import Markdown from 'unplugin-vue-markdown/vite'
+import { configMarkdown } from './src/utils/markdownSetup'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -37,11 +36,7 @@ export default defineConfig({
         typographer: true,
       },
       // A function providing the Markdown It instance gets the ability to apply custom settings/plugins
-      markdownItSetup(md) {
-        // for example
-        md.use(MarkdownItAnchor)
-        md.use(MarkdownItPrism)
-      },
+      markdownItSetup: configMarkdown,
       // Class names for the wrapper div
       wrapperClasses: '',
     }),
