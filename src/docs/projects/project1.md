@@ -1,25 +1,25 @@
 # Cyclistic Case Study: Analysing Customer Behaviours to Recommend Marketing Strategies for Converting Casual Members into Annual Members
 
-## Table of Contents
+<!-- ## Table of Contents
 
-1. [Introduction](#1-introduction)  
-   1.1. [Summary](#11-summary)  
-   1.2. [About the Company](#12-about-the-company)  
-   1.3. [Business Questions](#13-business-questions)  
+1. [Introduction](#1-introduction)
+   1.1. [Summary](#11-summary)
+   1.2. [About the Company](#12-about-the-company)
+   1.3. [Business Questions](#13-business-questions)
    1.4. [Data Source](#14-data-source)
-2. [Data Analysis Process](#2-data-analysis-process)  
-   2.1. [Data Collection (Python)](#21-data-collection-python)  
+2. [Data Analysis Process](#2-data-analysis-process)
+   2.1. [Data Collection (Python)](#21-data-collection-python)
    2.2. [Data Cleaning and Manipulation (SQL)](#22-data-cleaning-and-manipulation-sql)
    - 2.2.1. [Detect and Remove Duplicates](#221-detect-and-remove-duplicates)
-   - 2.2.2. [Remove Data Errors](#222-remove-data-errors)  
-     2.3. [Data Analysis (SQL)](#23-data-analysis-sql)  
-     2.4. [Data Visualization](#24-data-visualization)  
+   - 2.2.2. [Remove Data Errors](#222-remove-data-errors)
+     2.3. [Data Analysis (SQL)](#23-data-analysis-sql)
+     2.4. [Data Visualization](#24-data-visualization)
      2.5. [Key Insights and Recommendations](#25-key-insights-and-recommendations)
    - 2.5.1. [Key Insights](#251-key-insights)
    - 2.5.2. [Recommendation for Marketing Strategies](#252-recommendation-for-marketing-strategies)
 3. [Conclusion](#3-conclusion)
 
----
+--- -->
 
 ## 1. Introduction
 
