@@ -32,7 +32,7 @@ declare global {
   const mapStores: typeof import('pinia')['mapStores']
   const mapWritableState: typeof import('pinia')['mapWritableState']
   const markRaw: typeof import('vue')['markRaw']
-  const markdownItRules: typeof import('./src/utils/markdown-it-rules')['default']
+  const markdownItRules: typeof import('./src/utils/markdownItRules')['default']
   const nextTick: typeof import('vue')['nextTick']
   const onActivated: typeof import('vue')['onActivated']
   const onBeforeMount: typeof import('vue')['onBeforeMount']
@@ -120,6 +120,7 @@ declare module 'vue' {
     readonly mapStores: UnwrapRef<typeof import('pinia')['mapStores']>
     readonly mapWritableState: UnwrapRef<typeof import('pinia')['mapWritableState']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
+    readonly markdownItRules: UnwrapRef<typeof import('./src/utils/markdownItRules')['default']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
