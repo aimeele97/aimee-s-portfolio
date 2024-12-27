@@ -21,3 +21,28 @@ const showSideBar = computed(() => smAndUp.value)
     </VMain>
   </VLayout>
 </template>
+
+<style lang="sass">
+.markdown-body
+  a:not(:hover)
+    text-decoration: none
+
+  p
+    margin-bottom: 1rem
+    line-height: 1.8
+
+    a, a:visited
+      color: rgb(var(--v-theme-primary))
+
+  h1
+    + p
+      font-size: 1.25rem
+      font-weight: 300
+
+  ul:not([class]),
+  ol:not([class])
+    padding-left: 28px
+    margin-bottom: 16px
+    li
+      margin-bottom: 4px
+</style>

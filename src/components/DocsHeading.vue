@@ -35,7 +35,7 @@ const props = defineProps<{
 }>()
 
 const component = computed(() => `h${props.level}`)
-const classes = computed(() => ['v-heading', 'mb-2', HEADING_CLASSES[props.level]])
+const classes = computed(() => ['v-heading', 'my-2', HEADING_CLASSES[props.level]])
 </script>
 
 <style lang="sass">
