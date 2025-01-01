@@ -18,7 +18,7 @@ const handleProjectItemClick = (projectItem: ProjectNavItem) => {
   <VDivider></VDivider>
   <div class="px-2">
     <VList v-model:opened="open">
-      <VListItem title="Home" value="home" rounded></VListItem>
+      <VListItem title="Introduction" value="Introduction" rounded></VListItem>
       <VListGroup value="projects">
         <template #activator="{ props }">
           <VListItem v-bind="props" title="Personal Projects" rounded></VListItem>

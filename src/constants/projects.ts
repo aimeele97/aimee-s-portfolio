@@ -15,7 +15,7 @@ export type ProjectNavItem = {
 export const projects: ProjectNavItem[] = [
   {
     projectType: ProjectType.Cyclistic,
-    shortName: 'Cyclistic Case Study',
+    shortName: 'Cyclistic Customer Behavior',
     githubLink: 'https://github.com/aimeele97/cyclistic_customer_behaviour_analysis',
     tools: ['Python', 'MS SQL Server', 'Tableau'],
   },
@@ -27,13 +27,13 @@ export const projects: ProjectNavItem[] = [
   },
   {
     projectType: ProjectType.MintClassics,
-    shortName: 'Mint Classics',
+    shortName: 'Mint Classics Inventory',
     githubLink: 'https://github.com/aimeele97/mintclassics_modelcar_inventory_analysis',
     tools: ['MySQL'],
   },
   {
     projectType: ProjectType.NetflixSentiment,
-    shortName: 'Netflix Sentiment Analysis',
+    shortName: 'Netflix Reviews',
     githubLink: 'https://github.com/aimeele97/netflix_time_series_sentiment_analysis',
     tools: ['Python'],
   },
