@@ -4,7 +4,7 @@ import { projects, type ProjectNavItem } from '@/constants/projects'
 import { mdiGithub, mdiOpenInNew } from '@mdi/js'
 
 const handleProjectItemClick = (projectItem: ProjectNavItem) => {
-  window.open(projectItem.linkToProject, '_blank')
+  window.open(projectItem.githubLink, '_blank')
 }
 </script>
 <template>

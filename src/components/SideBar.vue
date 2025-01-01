@@ -6,7 +6,7 @@ const open = defineModel()
 open.value = ['projects']
 
 const handleProjectItemClick = (projectItem: ProjectNavItem) => {
-  window.open(projectItem.linkToProject, '_blank')
+  window.open(projectItem.githubLink, '_blank')
 }
 </script>
 <template>
