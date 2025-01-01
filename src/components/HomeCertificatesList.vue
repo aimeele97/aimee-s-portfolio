@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { certiItems } from '@/constants/certificates'
+import { cardColor } from '@/constants/colors'
 import { mdiOpenInNew } from '@mdi/js'
 </script>
 
@@ -11,13 +12,7 @@ import { mdiOpenInNew } from '@mdi/js'
     <VRow>
       <template v-for="certiItem in certiItems" :key="certiItem.certiType">
         <VCol>
-          <VCard
-            color="blue-grey-darken-2"
-            hover
-            link
-            target="_blank"
-            :href="certiItem.linkToCerti"
-          >
+          <VCard :color="cardColor" hover link target="_blank" :href="certiItem.linkToCerti">
             <VImg :src="certiItem.certiImgSrc"></VImg>
 
             <VCardItem>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cardColor } from '@/constants/colors'
 import { projects } from '@/constants/projects'
 import { mdiOpenInNew } from '@mdi/js'
 </script>
@@ -11,7 +12,7 @@ import { mdiOpenInNew } from '@mdi/js'
       <template v-for="project in projects" :key="project.projectType">
         <VCol>
           <VCard
-            color="blue-grey-darken-2"
+            :color="cardColor"
             height="280"
             hover
             link
