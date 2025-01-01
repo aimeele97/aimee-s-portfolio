@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { certiItems } from '@/constants/certificates'
+</script>
+
 <template>
   <VSheet class="pa-4 mt-4" rounded border>
     <div class="text-center mb-4">
@@ -7,30 +11,17 @@
         Speadsheets, SQL, Tableau, Python.
       </div>
     </div>
-    <!-- <VRow>
-      <template v-for="project in projects" :key="project.projectType">
+    <VRow>
+      <template v-for="certiItem in certiItems" :key="certiItem.certiType">
         <VCol>
-          <VCard
-            color="indigo-darken-1"
-            height="280"
-            hover
-            link
-            :href="project.linkToProject"
-            target="_blank"
-          >
-            <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
-            <VCardItem>
-              <VCardTitle class="text-h6"> {{ project.shortName }} </VCardTitle>
-              <template #append>
-                <VIcon :icon="mdiOpenInNew"></VIcon>
-              </template>
-            </VCardItem>
+          <VCard height="280" hover link target="_blank" :href="certiItem.linkToCerti">
+            <VImg :src="certiItem.certiImgSrc"></VImg>
             <VCardText class="text-justify">
-              {{ project.shortDesc }}
+              {{ certiItem.certiName }}
             </VCardText>
           </VCard>
         </VCol>
       </template>
-    </VRow> -->
+    </VRow>
   </VSheet>
 </template>
