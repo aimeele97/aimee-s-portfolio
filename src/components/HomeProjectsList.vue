@@ -4,18 +4,14 @@ import { mdiOpenInNew } from '@mdi/js'
 </script>
 <template>
   <VSheet class="pa-4 mt-4" rounded border>
-    <div class="text-center mb-4">
-      <div class="text-h5 font-weight-bold mb-2">My personal projects.</div>
-      <div class="text-h6">
-        <span class="text-indigo-lighten-1 font-weight-bold">Tools and techniques: </span>
-        Speadsheets, SQL, Tableau, Python.
-      </div>
+    <div class="mb-4">
+      <div class="text-h5 font-weight-bold mb-2">My personal projects</div>
     </div>
     <VRow>
       <template v-for="project in projects" :key="project.projectType">
         <VCol>
           <VCard
-            color="indigo-darken-1"
+            color="blue-grey-darken-2"
             height="280"
             hover
             link
@@ -26,7 +22,7 @@ import { mdiOpenInNew } from '@mdi/js'
             <VCardItem>
               <VCardTitle class="text-h6"> {{ project.shortName }} </VCardTitle>
               <template #append>
-                <VIcon :icon="mdiOpenInNew"></VIcon>
+                <VIcon :icon="mdiOpenInNew" size="x-small"></VIcon>
               </template>
             </VCardItem>
             <VCardText class="text-justify">
