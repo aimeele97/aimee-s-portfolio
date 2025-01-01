@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import introPic from '@/assets/intro-avatar.jpg'
+import { projects } from '@/constants/projects'
 
 const open = defineModel()
 open.value = ['projects']
@@ -18,10 +19,13 @@ open.value = ['projects']
         <template #activator="{ props }">
           <VListItem v-bind="props" title="Projects" rounded></VListItem>
         </template>
-        <VListItem title="Project 1" value="project1" rounded></VListItem>
-        <VListItem title="Project 2" value="project2" rounded></VListItem>
-        <VListItem title="Project 3" value="project3" rounded></VListItem>
-        <VListItem title="Project 4" value="project4" rounded></VListItem>
+        <VListItem
+          v-for="project in projects"
+          :key="project.projectType"
+          :title="project.shortName"
+          :value="project.projectType"
+          rounded
+        ></VListItem>
       </VListGroup>
       <VListItem title="Contact" value="contact" rounded></VListItem>
     </VList>
