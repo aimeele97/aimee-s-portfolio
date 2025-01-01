@@ -32,6 +32,7 @@ const handleProjectItemClick = (projectItem: ProjectNavItem) => {
           @click="handleProjectItemClick(project)"
         ></VListItem>
       </VListGroup>
+      <VListItem title="Certifications" value="certifications" rounded></VListItem>
       <VListItem title="Contact" value="contact" rounded></VListItem>
     </VList>
   </div>
