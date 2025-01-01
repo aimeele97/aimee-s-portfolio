@@ -15,15 +15,31 @@ const handleProjectItemClick = (projectItem: ProjectNavItem) => {
     <VRow>
       <template v-for="project in projects" :key="project.projectType">
         <VCol>
-          <VCard :color="cardColor" height="280" hover>
+          <VCard height="290" :color="cardColor" hover>
             <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
-            <VCardText>
+            <VCardText class="py-1">
               <div class="text-body-1 font-weight-medium">
                 {{ project.shortName }}
               </div>
+              <div class="d-flex flex-wrap ga-1 pt-2">
+                <span class="text-orange-darken-2">Tools:</span>
+                <VChip
+                  v-for="tool in project.tools"
+                  :key="tool"
+                  label
+                  size="small"
+                  density="compact"
+                  >{{ tool }}</VChip
+                >
+              </div>
             </VCardText>
-            <VCardActions>
-              <VBtn color="grey-darken-3" variant="tonal" @click="handleProjectItemClick(project)">
+            <VCardActions class="px-4">
+              <VBtn
+                size="small"
+                color="grey-darken-3"
+                variant="tonal"
+                @click="handleProjectItemClick(project)"
+              >
                 <template #prepend>
                   <VIcon :icon="mdiGithub"></VIcon>
                 </template>
