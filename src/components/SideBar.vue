@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import introPic from '@/assets/intro-avatar.jpg'
+import { contactItems, type ContactItem } from '@/constants/contacts'
 import { projects, type ProjectNavItem } from '@/constants/projects'
 
 const open = defineModel()
@@ -7,6 +8,10 @@ open.value = ['projects']
 
 const handleProjectItemClick = (projectItem: ProjectNavItem) => {
   window.open(projectItem.githubLink, '_blank')
+}
+
+const handleContactItemClick = (contactItem: ContactItem) => {
+  window.open(contactItem.link, '_blank')
 }
 </script>
 <template>
@@ -35,5 +40,16 @@ const handleProjectItemClick = (projectItem: ProjectNavItem) => {
       <VListItem title="Certifications" value="certifications" rounded></VListItem>
       <VListItem title="Contact" value="contact" rounded></VListItem>
     </VList>
+  </div>
+  <div class="px-6 d-flex gc-2">
+    <div
+      v-for="contactItem in contactItems"
+      :key="contactItem.contactType"
+      class="d-flex justify-center align-center"
+      @click="handleContactItemClick(contactItem)"
+      style="cursor: pointer"
+    >
+      <ContactIcon :contact-type="contactItem.contactType"></ContactIcon>
+    </div>
   </div>
 </template>
