@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { projects } from '@/constants/projects'
+import { mdiOpenInNew } from '@mdi/js'
+</script>
+
 <template>
   <VSheet class="pa-4 mt-2" rounded border>
     <div class="text-h4 mb-4">Hi. I'm <span class="font-weight-bold">Aimee Le.</span></div>
@@ -21,46 +26,29 @@
       </div>
     </div>
     <VRow>
-      <VCol>
-        <VCard color="indigo-darken-1" hover>
-          <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
-          <VCardTitle class="text-h6"> Project 1 </VCardTitle>
-          <VCardText
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis
-            est labore voluptatibus!</VCardText
+      <template v-for="project in projects" :key="project.projectType">
+        <VCol>
+          <VCard
+            color="indigo-darken-1"
+            height="280"
+            hover
+            link
+            :href="project.linkToProject"
+            target="_blank"
           >
-        </VCard>
-      </VCol>
-      <VCol>
-        <VCard color="indigo-darken-1" hover>
-          <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
-          <VCardTitle class="text-h6"> Project 2 </VCardTitle>
-          <VCardText
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis
-            est labore voluptatibus!</VCardText
-          >
-        </VCard>
-      </VCol>
-      <VCol>
-        <VCard color="indigo-darken-1" hover>
-          <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
-          <VCardTitle class="text-h6"> Project 3 </VCardTitle>
-          <VCardText
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis
-            est labore voluptatibus!</VCardText
-          >
-        </VCard>
-      </VCol>
-      <VCol>
-        <VCard color="indigo-darken-1" hover>
-          <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
-          <VCardTitle class="text-h6"> Project 4 </VCardTitle>
-          <VCardText
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis
-            est labore voluptatibus!</VCardText
-          >
-        </VCard>
-      </VCol>
+            <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
+            <VCardItem>
+              <VCardTitle class="text-h6"> {{ project.shortName }} </VCardTitle>
+              <template #append>
+                <VIcon :icon="mdiOpenInNew"></VIcon>
+              </template>
+            </VCardItem>
+            <VCardText class="text-justify">
+              {{ project.shortDesc }}
+            </VCardText>
+          </VCard>
+        </VCol>
+      </template>
     </VRow>
   </VSheet>
   <VSheet></VSheet>
