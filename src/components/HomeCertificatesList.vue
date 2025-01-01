@@ -7,7 +7,7 @@ import { mdiOpenInNew } from '@mdi/js'
 <template>
   <VSheet class="pa-4 mt-4" rounded border>
     <div class="mb-4">
-      <div class="text-h5 font-weight-bold mb-2">My certifications</div>
+      <div class="text-h5 font-weight-bold mb-2">Certifications</div>
     </div>
     <VRow>
       <template v-for="certiItem in certiItems" :key="certiItem.certiType">

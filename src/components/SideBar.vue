@@ -21,7 +21,7 @@ const handleProjectItemClick = (projectItem: ProjectNavItem) => {
       <VListItem title="Home" value="home" rounded></VListItem>
       <VListGroup value="projects">
         <template #activator="{ props }">
-          <VListItem v-bind="props" title="Projects" rounded></VListItem>
+          <VListItem v-bind="props" title="Personal Projects" rounded></VListItem>
         </template>
         <VListItem
           v-for="project in projects"
