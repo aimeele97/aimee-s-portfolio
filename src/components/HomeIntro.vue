@@ -1,5 +1,9 @@
+<script setup lang="ts">
+import { sectionId, SectionType } from '@/constants/sections'
+</script>
+
 <template>
-  <VSheet class="pa-4 mt-2" rounded border>
+  <VSheet :id="sectionId(SectionType.Introduction)" class="pa-4 mt-2" rounded border>
     <div class="mb-4">
       <div class="text-h5 font-weight-bold mb-2">Introduction</div>
     </div>
