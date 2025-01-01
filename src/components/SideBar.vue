@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import introPic from '@/assets/intro-avatar.jpg'
-import { projects } from '@/constants/projects'
+import { projects, type ProjectNavItem } from '@/constants/projects'
 
 const open = defineModel()
 open.value = ['projects']
+
+const handleProjectItemClick = (projectItem: ProjectNavItem) => {
+  window.open(projectItem.linkToProject, '_blank')
+}
 </script>
 <template>
   <div class="d-flex justify-center px-6 py-4">
@@ -25,6 +29,7 @@ open.value = ['projects']
           :title="project.shortName"
           :value="project.projectType"
           rounded
+          @click="handleProjectItemClick(project)"
         ></VListItem>
       </VListGroup>
       <VListItem title="Contact" value="contact" rounded></VListItem>

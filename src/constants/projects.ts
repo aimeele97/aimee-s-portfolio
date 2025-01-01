@@ -5,7 +5,7 @@ export enum ProjectType {
   NetflixSentiment = 'netflixSentiment',
 }
 
-type ProjectNavItem = {
+export type ProjectNavItem = {
   projectType: ProjectType
   shortName: string
   linkToProject: string
