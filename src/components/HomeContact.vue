@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { contactItems } from '@/constants/contacts'
+import { sectionId, SectionType } from '@/constants/sections'
 </script>
 
 <template>
-  <VSheet class="pa-4 mt-4" rounded border>
+  <VSheet :id="sectionId(SectionType.Contact)" class="pa-4 mt-4" rounded border>
     <div class="mb-4">
       <div class="text-h5 font-weight-bold mb-2">Contact</div>
     </div>

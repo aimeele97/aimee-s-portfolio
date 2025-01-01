@@ -3,13 +3,14 @@ import { cardColor } from '@/constants/colors'
 import { projects, type ProjectNavItem } from '@/constants/projects'
 import { mdiGithub, mdiOpenInNew } from '@mdi/js'
 import ProjectImg from './ProjectImg.vue'
+import { sectionId, SectionType } from '@/constants/sections'
 
 const handleProjectItemClick = (projectItem: ProjectNavItem) => {
   window.open(projectItem.githubLink, '_blank')
 }
 </script>
 <template>
-  <VSheet class="pa-4 mt-4" rounded border>
+  <VSheet :id="sectionId(SectionType.Projects)" class="pa-4 mt-4" rounded border>
     <div class="mb-4">
       <div class="text-h5 font-weight-bold mb-2">Personal projects</div>
     </div>
