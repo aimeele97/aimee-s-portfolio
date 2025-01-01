@@ -13,6 +13,7 @@ declare module 'vue' {
     HomeContact: typeof import('./src/components/HomeContact.vue')['default']
     HomeIntro: typeof import('./src/components/HomeIntro.vue')['default']
     HomeProjectsList: typeof import('./src/components/HomeProjectsList.vue')['default']
+    ProjectImg: typeof import('./src/components/ProjectImg.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SideBar: typeof import('./src/components/SideBar.vue')['default']

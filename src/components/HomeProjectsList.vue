@@ -2,6 +2,7 @@
 import { cardColor } from '@/constants/colors'
 import { projects, type ProjectNavItem } from '@/constants/projects'
 import { mdiGithub, mdiOpenInNew } from '@mdi/js'
+import ProjectImg from './ProjectImg.vue'
 
 const handleProjectItemClick = (projectItem: ProjectNavItem) => {
   window.open(projectItem.githubLink, '_blank')
@@ -16,7 +17,7 @@ const handleProjectItemClick = (projectItem: ProjectNavItem) => {
       <template v-for="project in projects" :key="project.projectType">
         <VCol>
           <VCard class="h-100" :color="cardColor" hover>
-            <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
+            <ProjectImg :project-type="project.projectType"></ProjectImg>
             <VCardText class="d-flex flex-column ga-2">
               <div class="text-body-1 font-weight-medium">
                 {{ project.shortName }}
