@@ -1,8 +1,18 @@
 <script setup lang="ts">
 import introPic from '@/assets/intro-avatar.jpg'
+import { contactItems, type ContactItem } from '@/constants/contacts'
+import { projects, type ProjectNavItem } from '@/constants/projects'
 
 const open = defineModel()
 open.value = ['projects']
+
+const handleProjectItemClick = (projectItem: ProjectNavItem) => {
+  window.open(projectItem.githubLink, '_blank')
+}
+
+const handleContactItemClick = (contactItem: ContactItem) => {
+  window.open(contactItem.link, '_blank')
+}
 </script>
 <template>
   <div class="d-flex justify-center px-6 py-4">
@@ -13,17 +23,33 @@ open.value = ['projects']
   <VDivider></VDivider>
   <div class="px-2">
     <VList v-model:opened="open">
-      <VListItem title="Home" value="home" rounded></VListItem>
+      <VListItem title="Introduction" value="Introduction" rounded></VListItem>
       <VListGroup value="projects">
         <template #activator="{ props }">
-          <VListItem v-bind="props" title="Projects" rounded></VListItem>
+          <VListItem v-bind="props" title="Personal Projects" rounded></VListItem>
         </template>
-        <VListItem title="Project 1" value="project1" rounded></VListItem>
-        <VListItem title="Project 2" value="project2" rounded></VListItem>
-        <VListItem title="Project 3" value="project3" rounded></VListItem>
-        <VListItem title="Project 4" value="project4" rounded></VListItem>
+        <VListItem
+          v-for="project in projects"
+          :key="project.projectType"
+          :title="project.shortName"
+          :value="project.projectType"
+          rounded
+          @click="handleProjectItemClick(project)"
+        ></VListItem>
       </VListGroup>
+      <VListItem title="Certifications" value="certifications" rounded></VListItem>
       <VListItem title="Contact" value="contact" rounded></VListItem>
     </VList>
+  </div>
+  <div class="px-6 d-flex gc-2">
+    <div
+      v-for="contactItem in contactItems"
+      :key="contactItem.contactType"
+      class="d-flex justify-center align-center"
+      @click="handleContactItemClick(contactItem)"
+      style="cursor: pointer"
+    >
+      <ContactIcon :contact-type="contactItem.contactType"></ContactIcon>
+    </div>
   </div>
 </template>

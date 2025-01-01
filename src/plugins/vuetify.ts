@@ -6,7 +6,6 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import { mdiAccount } from '@mdi/js'
 
 export default createVuetify({
-  theme: { defaultTheme: 'dark' },
   components,
   directives,
   icons: {

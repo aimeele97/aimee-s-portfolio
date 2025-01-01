@@ -10,7 +10,7 @@ const showSideBar = computed(() => smAndUp.value)
 
 <template>
   <VLayout>
-    <VNavigationDrawer v-if="showSideBar" :permanent="showSideBar">
+    <VNavigationDrawer v-if="showSideBar" :permanent="showSideBar" width="270">
       <SideBar></SideBar>
     </VNavigationDrawer>
     <VAppBar v-else title="Application bar"></VAppBar>
