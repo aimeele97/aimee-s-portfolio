@@ -15,11 +15,22 @@ const handleProjectItemClick = (projectItem: ProjectNavItem) => {
     <VRow>
       <template v-for="project in projects" :key="project.projectType">
         <VCol>
-          <VCard height="290" :color="cardColor" hover>
+          <VCard class="h-100" :color="cardColor" hover>
             <VImg class="bg-grey-lighten-2" src="https://picsum.photos/350/165?random"></VImg>
-            <VCardText class="py-1">
+            <VCardText class="d-flex flex-column ga-2">
               <div class="text-body-1 font-weight-medium">
                 {{ project.shortName }}
+              </div>
+              <div>
+                <VBtn size="x-small" variant="outlined" @click="handleProjectItemClick(project)">
+                  <template #prepend>
+                    <VIcon :icon="mdiGithub"></VIcon>
+                  </template>
+                  See Github repo
+                  <template #append>
+                    <VIcon :icon="mdiOpenInNew"></VIcon>
+                  </template>
+                </VBtn>
               </div>
               <div class="d-flex flex-wrap ga-1 pt-2">
                 <span class="text-orange-darken-2">Tools:</span>
@@ -33,22 +44,6 @@ const handleProjectItemClick = (projectItem: ProjectNavItem) => {
                 >
               </div>
             </VCardText>
-            <VCardActions class="px-4">
-              <VBtn
-                size="small"
-                color="grey-darken-3"
-                variant="tonal"
-                @click="handleProjectItemClick(project)"
-              >
-                <template #prepend>
-                  <VIcon :icon="mdiGithub"></VIcon>
-                </template>
-                See Github repo
-                <template #append>
-                  <VIcon :icon="mdiOpenInNew"></VIcon>
-                </template>
-              </VBtn>
-            </VCardActions>
           </VCard>
         </VCol>
       </template>
