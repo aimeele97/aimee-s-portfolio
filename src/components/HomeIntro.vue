@@ -9,11 +9,11 @@ import { sectionId, SectionType } from '@/constants/sections'
     </div>
     <div class="text-justify mb-2">
       Hello! I’m <span class="font-weight-bold">Aimee (Thi Cam Tien) Le</span>, an enthusiastic
-      <span class="font-weight-bold">Associate Data Analyst </span> with hands-on experience in data
+      <span class="font-weight-bold">Associate Analyst </span> with hands-on experience in data
       cleaning, analysis, and visualization. I specialize in transforming complex datasets into
       actionable insights that support strategic decision-making and business improvement. With a
       strong foundation in tools like
-      <span class="font-weight-bold"> SQL, Excel (VBA), Python, and R</span>, I am adept at using
+      <span class="font-weight-bold"> SQL, Excel, Python, and R</span>, I am adept at using
       statistical and financial models to drive analysis and problem-solving across various business
       domains.
     </div>
