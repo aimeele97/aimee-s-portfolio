@@ -13,7 +13,7 @@ import { sectionId, SectionType } from '@/constants/sections'
       cleaning, analysis, and visualization. I specialize in transforming complex datasets into
       actionable insights that support strategic decision-making and business improvement. With a
       strong foundation in tools like
-      <span class="font-weight-bold"> SQL, Excel, Python, and R</span>, I am adept at using
+      <span class="font-weight-bold"> SQL, Excel, Python, R, Tableau</span>, I am adept at using
       statistical and financial models to drive analysis and problem-solving across various business
       domains.
     </div>
