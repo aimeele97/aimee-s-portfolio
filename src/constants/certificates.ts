@@ -25,13 +25,13 @@ export const certiItems: CertiItem[] = [
   },
   {
     certiType: CertiType.IBM,
-    certiName: 'IBM Data Analytics',
+    certiName: 'IBM Data Analyst',
     certiImgSrc: IBMCertiImg,
     linkToCerti: 'https://coursera.org/share/630e9c1598367f752e30e3a595e04552',
   },
   {
     certiType: CertiType.RICE,
-    certiName: 'RICE Business Analytics',
+    certiName: 'RICE Business Statistics',
     certiImgSrc: RICECertiImg,
     linkToCerti: 'https://coursera.org/share/c0db33b9c60c3fd93641fbd427031829',
   },
