@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import { cardColor } from '@/constants/colors'
-import { projects, type ProjectNavItem } from '@/constants/projects'
+import { projects } from '@/constants/projects'
 import { mdiGithub, mdiOpenInNew } from '@mdi/js'
 import ProjectImg from './ProjectImg.vue'
 import { sectionId, SectionType } from '@/constants/sections'
-
-const handleProjectItemClick = (projectItem: ProjectNavItem) => {
-  window.open(projectItem.githubLink, '_blank')
-}
 </script>
 <template>
   <VSheet :id="sectionId(SectionType.Projects)" class="pa-4 mt-4" rounded border>
@@ -17,14 +13,21 @@ const handleProjectItemClick = (projectItem: ProjectNavItem) => {
     <VRow>
       <template v-for="project in projects" :key="project.projectType">
         <VCol>
-          <VCard class="h-100" :color="cardColor" hover>
+          <VCard
+            class="h-100"
+            :color="cardColor"
+            hover
+            link
+            target="_blank"
+            :href="project.githubLink"
+          >
             <ProjectImg :project-type="project.projectType"></ProjectImg>
             <VCardText class="d-flex flex-column ga-2">
               <div class="text-body-1 font-weight-medium">
                 {{ project.shortName }}
               </div>
               <div>
-                <VBtn size="x-small" variant="outlined" @click="handleProjectItemClick(project)">
+                <VBtn size="x-small" variant="outlined" :href="project.githubLink" target="_blank">
                   <template #prepend>
                     <VIcon :icon="mdiGithub"></VIcon>
                   </template>
