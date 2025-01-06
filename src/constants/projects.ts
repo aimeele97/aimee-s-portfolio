@@ -29,7 +29,7 @@ export const projects: ProjectNavItem[] = [
     projectType: ProjectType.MintClassics,
     shortName: 'Mint Classics Inventory',
     githubLink: 'https://github.com/aimeele97/mintclassics_modelcar_inventory_analysis',
-    tools: ['MySQL'],
+    tools: ['MySQL', 'Google Looker'],
   },
   {
     projectType: ProjectType.NetflixSentiment,
